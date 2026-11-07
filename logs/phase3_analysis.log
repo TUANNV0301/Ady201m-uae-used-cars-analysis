@@ -1,0 +1,136 @@
+2026-11-04 21:20:07 [INFO] [phase3]: ======================================================================
+2026-11-04 21:20:07 [INFO] [phase3]: STARTING PHASE 3: PYTHON ANALYSIS & VISUALIZATION
+2026-11-04 21:20:07 [INFO] [phase3]: ======================================================================
+2026-11-04 21:20:07 [INFO] [phase3]: Loaded model features: 10000 rows, 32 cols
+2026-11-04 21:20:07 [INFO] [phase3]: Generating figures...
+2026-11-04 21:20:08 [INFO] [phase3]: Saved: figures/fig_3_1_listings_per_make.png
+2026-11-04 21:20:08 [INFO] [phase3]: Saved: figures/fig_3_2_median_price_per_make.png
+2026-11-04 21:20:08 [INFO] [phase3]: Saved: figures/fig_3_3_log_price_by_body_type.png
+2026-11-04 21:20:08 [INFO] [phase3]: Saved: figures/fig_3_4_price_and_count_by_year.png
+2026-11-04 21:20:08 [INFO] [phase3]: Saved: figures/fig_3_5_mileage_vs_price_by_tier.png
+2026-11-04 21:20:09 [INFO] [phase3]: Saved: figures/fig_3_6_spearman_correlation_matrix.png
+2026-11-04 21:20:09 [INFO] [phase3]: Saved: figures/fig_3_7_listings_price_by_region.png
+2026-11-04 21:20:09 [INFO] [phase3]: Saved: figures/fig_3_8_price_ratio_by_condition.png
+2026-11-04 21:20:09 [INFO] [phase3]: Saved: figures/fig_3_9_feature_premium_within_model.png
+2026-11-04 21:20:21 [INFO] [phase3]: Saved: figures/fig_3_10_treemap.png
+2026-11-04 21:20:21 [INFO] [phase3]: Saved: figures/fig_3_10_treemap.html
+2026-11-04 21:20:24 [INFO] [phase3]: Saved: figures/fig_3_11_scatter_age_vs_ratio.png + figures/fig_3_11_scatter_age_vs_ratio.html
+2026-11-04 21:20:24 [INFO] [phase3]: Saved: figures/fig_3_12_price_heatmap_tier_age.png
+2026-11-04 21:20:24 [INFO] [phase3]: Running analysis tables...
+2026-11-04 21:20:24 [INFO] [phase3]: Cross-tab Body×Fuel computed: (14, 5)
+2026-11-04 21:20:24 [INFO] [phase3]: Multi-index groupby Make Tier × Age Bucket computed
+2026-11-04 21:20:24 [INFO] [phase3]: Spearman ρ(log_price, car_age)=0.000, ρ(log_price, log_mileage)=0.007, ρ(log_price, cylinders)=0.430
+2026-11-04 21:20:24 [INFO] [phase3]: Within-model regression – car_age: slope=-0.0023, r²=0.0004, p=0.0591
+2026-11-04 21:20:24 [INFO] [phase3]: Within-model regression – log_mileage: slope=-0.0137, r²=0.0002, p=0.1428
+2026-11-04 21:20:24 [INFO] [phase3]: Kruskal-Wallis condition test: H=2.624, p=0.7578
+2026-11-04 21:20:24 [INFO] [phase3]: Condition stats:
+                  count   mean  median    std
+condition                                    
+Accident history   1650  1.158   1.000  0.723
+Dented door        1681  1.158   1.000  0.702
+Engine repaired    1680  1.147   0.988  0.702
+Minor scratches    1614  1.152   1.000  0.703
+No damage          1633  1.172   1.000  0.729
+Repainted bumper   1665  1.141   0.995  0.699
+2026-11-04 21:20:24 [INFO] [phase3]: Make tier stats:
+              count  median_price  mean_price
+make_tier                                    
+Budget          870       42164.0     49475.0
+Mid            3603       71087.0     98629.0
+Premium        2263      107643.0    160452.0
+Ultra-Luxury   3264      258560.0    518027.0
+2026-11-04 21:20:24 [INFO] [phase3]: --------------------------------------------------
+2026-11-04 21:20:24 [INFO] [phase3]: CROSS-TAB Body Type × Fuel Type (top rows):
+2026-11-04 21:20:24 [INFO] [phase3]: fuel_type             Diesel  Electric  Gasoline  Hybrid  All
+body_type                                                    
+Coupe                      1         3       832       1  837
+Crossover                  0        30       105       1  136
+Hard Top Convertible       0         0       139       0  139
+Hatchback                  0         3       330       1  334
+Other                     10         0       104       0  114
+2026-11-04 21:20:24 [INFO] [phase3]: 
+Make Tier Summary:
+2026-11-04 21:20:24 [INFO] [phase3]:               count  median_price  mean_price
+make_tier                                    
+Budget          870       42164.0     49475.0
+Mid            3603       71087.0     98629.0
+Premium        2263      107643.0    160452.0
+Ultra-Luxury   3264      258560.0    518027.0
+2026-11-04 21:20:24 [INFO] [phase3]: 
+Within-Model Regression Summary:
+2026-11-04 21:20:24 [INFO] [phase3]:   car_age: slope=-0.00232, r²=0.0004, p=0.0591
+2026-11-04 21:20:24 [INFO] [phase3]:   log_mileage: slope=-0.01367, r²=0.0002, p=0.1428
+2026-11-04 21:20:24 [INFO] [phase3]: 
+Kruskal-Wallis Condition Test:
+2026-11-04 21:20:24 [INFO] [phase3]:   H=2.624, p=0.7578
+2026-11-04 21:20:24 [INFO] [phase3]: ======================================================================
+2026-11-04 21:20:24 [INFO] [phase3]: PHASE 3 COMPLETED SUCCESSFULLY.
+2026-11-04 21:20:24 [INFO] [phase3]: ======================================================================
+2026-11-05 12:20:24 [INFO] [phase3]: ======================================================================
+2026-11-05 12:20:24 [INFO] [phase3]: STARTING PHASE 3: PYTHON ANALYSIS & VISUALIZATION
+2026-11-05 12:20:24 [INFO] [phase3]: ======================================================================
+2026-11-05 12:20:24 [INFO] [phase3]: Loaded model features: 10000 rows, 32 cols
+2026-11-05 12:20:24 [INFO] [phase3]: Generating figures...
+2026-11-05 12:20:24 [INFO] [phase3]: Saved: figures/fig_3_1_listings_per_make.png
+2026-11-05 12:20:25 [INFO] [phase3]: Saved: figures/fig_3_2_median_price_per_make.png
+2026-11-05 12:20:25 [INFO] [phase3]: Saved: figures/fig_3_3_log_price_by_body_type.png
+2026-11-05 12:20:26 [INFO] [phase3]: Saved: figures/fig_3_4_price_and_count_by_year.png
+2026-11-05 12:20:26 [INFO] [phase3]: Saved: figures/fig_3_5_mileage_vs_price_by_tier.png
+2026-11-05 12:20:27 [INFO] [phase3]: Saved: figures/fig_3_6_spearman_correlation_matrix.png
+2026-11-05 12:20:27 [INFO] [phase3]: Saved: figures/fig_3_7_listings_price_by_region.png
+2026-11-05 12:20:27 [INFO] [phase3]: Saved: figures/fig_3_8_price_ratio_by_condition.png
+2026-11-05 12:20:28 [INFO] [phase3]: Saved: figures/fig_3_9_feature_premium_within_model.png
+2026-11-05 12:20:32 [INFO] [phase3]: Saved: figures/fig_3_10_treemap.png
+2026-11-05 12:20:32 [INFO] [phase3]: Saved: figures/fig_3_10_treemap.html
+2026-11-05 12:20:38 [INFO] [phase3]: Saved: figures/fig_3_11_scatter_age_vs_ratio.png + figures/fig_3_11_scatter_age_vs_ratio.html
+2026-11-05 12:20:38 [INFO] [phase3]: Saved: figures/fig_3_12_price_heatmap_tier_age.png
+2026-11-05 12:20:38 [INFO] [phase3]: Running analysis tables...
+2026-11-05 12:20:38 [INFO] [phase3]: Cross-tab Body×Fuel computed: (14, 5)
+2026-11-05 12:20:38 [INFO] [phase3]: Multi-index groupby Make Tier × Age Bucket computed
+2026-11-05 12:20:38 [INFO] [phase3]: Spearman ρ(log_price, car_age)=0.000, ρ(log_price, log_mileage)=0.007, ρ(log_price, cylinders)=0.430
+2026-11-05 12:20:38 [INFO] [phase3]: Within-model regression – car_age: slope=-0.0023, r²=0.0004, p=0.0591
+2026-11-05 12:20:38 [INFO] [phase3]: Within-model regression – log_mileage: slope=-0.0137, r²=0.0002, p=0.1428
+2026-11-05 12:20:38 [INFO] [phase3]: Kruskal-Wallis condition test: H=2.624, p=0.7578
+2026-11-05 12:20:38 [INFO] [phase3]: Condition stats:
+                  count   mean  median    std
+condition                                    
+Accident history   1650  1.158   1.000  0.723
+Dented door        1681  1.158   1.000  0.702
+Engine repaired    1680  1.147   0.988  0.702
+Minor scratches    1614  1.152   1.000  0.703
+No damage          1633  1.172   1.000  0.729
+Repainted bumper   1665  1.141   0.995  0.699
+2026-11-05 12:20:38 [INFO] [phase3]: Make tier stats:
+              count  median_price  mean_price
+make_tier                                    
+Budget          870       42164.0     49475.0
+Mid            3603       71087.0     98629.0
+Premium        2263      107643.0    160452.0
+Ultra-Luxury   3264      258560.0    518027.0
+2026-11-05 12:20:38 [INFO] [phase3]: --------------------------------------------------
+2026-11-05 12:20:38 [INFO] [phase3]: CROSS-TAB Body Type × Fuel Type (top rows):
+2026-11-05 12:20:38 [INFO] [phase3]: fuel_type             Diesel  Electric  Gasoline  Hybrid  All
+body_type                                                    
+Coupe                      1         3       832       1  837
+Crossover                  0        30       105       1  136
+Hard Top Convertible       0         0       139       0  139
+Hatchback                  0         3       330       1  334
+Other                     10         0       104       0  114
+2026-11-05 12:20:38 [INFO] [phase3]: 
+Make Tier Summary:
+2026-11-05 12:20:38 [INFO] [phase3]:               count  median_price  mean_price
+make_tier                                    
+Budget          870       42164.0     49475.0
+Mid            3603       71087.0     98629.0
+Premium        2263      107643.0    160452.0
+Ultra-Luxury   3264      258560.0    518027.0
+2026-11-05 12:20:38 [INFO] [phase3]: 
+Within-Model Regression Summary:
+2026-11-05 12:20:38 [INFO] [phase3]:   car_age: slope=-0.00232, r²=0.0004, p=0.0591
+2026-11-05 12:20:38 [INFO] [phase3]:   log_mileage: slope=-0.01367, r²=0.0002, p=0.1428
+2026-11-05 12:20:38 [INFO] [phase3]: 
+Kruskal-Wallis Condition Test:
+2026-11-05 12:20:38 [INFO] [phase3]:   H=2.624, p=0.7578
+2026-11-05 12:20:38 [INFO] [phase3]: ======================================================================
+2026-11-05 12:20:38 [INFO] [phase3]: PHASE 3 COMPLETED SUCCESSFULLY.
+2026-11-05 12:20:38 [INFO] [phase3]: ======================================================================

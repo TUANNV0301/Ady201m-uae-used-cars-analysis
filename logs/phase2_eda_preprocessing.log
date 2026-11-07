@@ -1,0 +1,47 @@
+2026-11-01 16:40:41 [INFO] [phase2]: ======================================================================
+2026-11-01 16:40:41 [INFO] [phase2]: STARTING PHASE 2: EDA & PREPROCESSING PIPELINE
+2026-11-01 16:40:41 [INFO] [phase2]: ======================================================================
+2026-11-01 16:40:41 [INFO] [phase2]: Loading raw dataset from: data/raw/uae_used_cars_10k.csv
+2026-11-01 16:40:41 [INFO] [phase2]: Raw data ingested successfully: 10000 rows, 12 columns
+2026-11-01 16:40:41 [INFO] [phase2]: Raw missing values per column:
+2026-11-01 16:40:41 [INFO] [phase2]:   - Make: 0 missing (0.00%)
+2026-11-01 16:40:41 [INFO] [phase2]:   - Model: 0 missing (0.00%)
+2026-11-01 16:40:41 [INFO] [phase2]:   - Year: 0 missing (0.00%)
+2026-11-01 16:40:41 [INFO] [phase2]:   - Price: 0 missing (0.00%)
+2026-11-01 16:40:41 [INFO] [phase2]:   - Mileage: 0 missing (0.00%)
+2026-11-01 16:40:41 [INFO] [phase2]:   - Body Type: 0 missing (0.00%)
+2026-11-01 16:40:41 [INFO] [phase2]:   - Cylinders: 105 missing (1.05%)
+2026-11-01 16:40:41 [INFO] [phase2]:   - Transmission: 0 missing (0.00%)
+2026-11-01 16:40:41 [INFO] [phase2]:   - Fuel Type: 0 missing (0.00%)
+2026-11-01 16:40:41 [INFO] [phase2]:   - Color: 0 missing (0.00%)
+2026-11-01 16:40:41 [INFO] [phase2]:   - Location: 0 missing (0.00%)
+2026-11-01 16:40:41 [INFO] [phase2]:   - Description: 0 missing (0.00%)
+2026-11-01 16:40:41 [INFO] [phase2]: Cylinders raw missingness: 105 blank/NaN + 50 'Unknown' = 155 (1.55%)
+2026-11-01 16:40:41 [INFO] [phase2]: Cleaning raw fields and parsing Description text...
+2026-11-01 16:40:41 [INFO] [phase2]: Unique conditions parsed: {'Dented door': 1695, 'Engine repaired': 1691, 'Repainted bumper': 1681, 'Accident history': 1662, 'No damage': 1646, 'Minor scratches': 1625}
+2026-11-01 16:40:41 [INFO] [phase2]: Imputing Cylinders via hierarchical mode (Make+Model -> Body Type -> Global)...
+2026-11-01 16:40:41 [INFO] [phase2]: Cylinders imputed count: 155 (1.55%)
+2026-11-01 16:40:41 [INFO] [phase2]: Remaining nulls in cylinders: 0
+2026-11-01 16:40:41 [INFO] [phase2]: Computing 1.5x IQR outlier fences on Price...
+2026-11-01 16:40:41 [INFO] [phase2]: Raw Price IQR: Q1=50,352.5, Q3=231,248.0, IQR=180,895.5
+2026-11-01 16:40:41 [INFO] [phase2]: Raw Price Fences: [-220,990.8, 502,591.2] AED
+2026-11-01 16:40:41 [INFO] [phase2]: Raw Price Outliers: 1100 (11.00%) - ALL genuine supercars preserved
+2026-11-01 16:40:41 [INFO] [phase2]: Log Price IQR: Q1=10.827, Q3=12.351, IQR=1.524
+2026-11-01 16:40:41 [INFO] [phase2]: Log Price Fences: [8.540, 14.638] (in AED: [5,116, 2,275,954])
+2026-11-01 16:40:41 [INFO] [phase2]: Log Price Outliers: 91 (0.91%)
+2026-11-01 16:40:41 [INFO] [phase2]: Executing feature engineering pipeline...
+2026-11-01 16:40:41 [INFO] [phase2]: Make tier counts:
+{'Mid': 3603, 'Ultra-Luxury': 3264, 'Premium': 2263, 'Budget': 870}
+2026-11-01 16:40:41 [INFO] [phase2]: Implausible usage flagged (>50,000 km/yr): 1268 (12.68%)
+2026-11-01 16:40:41 [INFO] [phase2]: Generating Phase 2 figures...
+2026-11-01 16:40:42 [INFO] [phase2]: Saved: figures/fig_2_2_price_distribution_raw_vs_log.png
+2026-11-01 16:40:42 [INFO] [phase2]: Saved: figures/fig_2_3_listings_per_body_type.png
+2026-11-01 16:40:42 [INFO] [phase2]: Saved: figures/fig_2_4_outlier_boxplots.png
+2026-11-01 16:40:42 [INFO] [phase2]: Saved clean interim listings: data/interim/clean_listings.csv (10000 rows)
+2026-11-01 16:40:42 [INFO] [phase2]: Saved processed model features: data/processed/model_features.csv (10000 rows, 32 columns)
+2026-11-01 16:40:42 [INFO] [phase2]: --------------------------------------------------
+2026-11-01 16:40:42 [INFO] [phase2]: AUDITING GATE G1 CRITERIA:
+2026-11-01 16:40:42 [INFO] [phase2]: ✓ Gate G1 PASSED: Exactly 10,000 rows, 0 nulls in critical predictors, all engineered features verified.
+2026-11-01 16:40:42 [INFO] [phase2]: ======================================================================
+2026-11-01 16:40:42 [INFO] [phase2]: PHASE 2 COMPLETED SUCCESSFULLY.
+2026-11-01 16:40:42 [INFO] [phase2]: ======================================================================

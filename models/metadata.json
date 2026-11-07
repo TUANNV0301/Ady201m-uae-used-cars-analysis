@@ -1,0 +1,115 @@
+{
+  "model_name": "Gradient Boosting Regressor (GBDT)",
+  "features": [
+    "car_age",
+    "log_mileage",
+    "cylinders",
+    "n_features",
+    "has_sunroof",
+    "has_leather_seats",
+    "has_navigation",
+    "has_bluetooth",
+    "has_rear_camera",
+    "has_adaptive_cruise",
+    "make_grouped",
+    "body_type",
+    "transmission",
+    "fuel_type",
+    "region_group",
+    "condition"
+  ],
+  "n_train": 8000,
+  "n_test": 2000,
+  "smearing_factor": 1.2454,
+  "test_r2_log": 0.5143,
+  "test_rmse_log": 0.7829,
+  "test_mae_aed": 133734.68,
+  "test_median_ape_pct": 49.18,
+  "cv_results": {
+    "Baseline (Mean)": {
+      "cv_r2": -0.0,
+      "cv_rmse": 1.1342,
+      "cv_mae": 0.9057
+    },
+    "OLS (Linear)": {
+      "cv_r2": 0.4402,
+      "cv_rmse": 0.8485,
+      "cv_mae": 0.671
+    },
+    "Random Forest": {
+      "cv_r2": 0.5313,
+      "cv_rmse": 0.7764,
+      "cv_mae": 0.6025
+    },
+    "Gradient Boosting (GBDT)": {
+      "cv_r2": 0.5405,
+      "cv_rmse": 0.7687,
+      "cv_mae": 0.6031
+    }
+  },
+  "test_metrics": {
+    "Baseline (Mean)": {
+      "r2_log": -0.0001,
+      "rmse_log": 1.1233,
+      "mse_log": 1.2619,
+      "mae_aed": 232808.36,
+      "rmse_aed": 509053.4,
+      "median_ape_pct": 140.71,
+      "mape_under_100k": 396.2,
+      "mape_100k_500k": 42.59,
+      "mape_over_500k": 70.96
+    },
+    "OLS (Linear)": {
+      "r2_log": 0.424,
+      "rmse_log": 0.8525,
+      "mse_log": 0.7268,
+      "mae_aed": 157120.25,
+      "rmse_aed": 438329.1,
+      "median_ape_pct": 57.36,
+      "mape_under_100k": 131.91,
+      "mape_100k_500k": 35.39,
+      "mape_over_500k": 56.84
+    },
+    "Random Forest": {
+      "r2_log": 0.5079,
+      "rmse_log": 0.788,
+      "mse_log": 0.6209,
+      "mae_aed": 136525.79,
+      "rmse_aed": 387895.37,
+      "median_ape_pct": 49.27,
+      "mape_under_100k": 78.49,
+      "mape_100k_500k": 38.27,
+      "mape_over_500k": 51.21
+    },
+    "Gradient Boosting (GBDT)": {
+      "r2_log": 0.5143,
+      "rmse_log": 0.7829,
+      "mse_log": 0.6129,
+      "mae_aed": 133734.68,
+      "rmse_aed": 387167.1,
+      "median_ape_pct": 49.18,
+      "mape_under_100k": 89.34,
+      "mape_100k_500k": 35.32,
+      "mape_over_500k": 45.38
+    }
+  },
+  "deal_flags": {
+    "Count": {
+      "Overpriced": 3638,
+      "Undervalued": 3389,
+      "Fair Price": 2973
+    },
+    "Share_Pct": {
+      "Overpriced": 36.38,
+      "Undervalued": 33.89,
+      "Fair Price": 29.73
+    }
+  },
+  "ols_summary": {
+    "r2": 0.4486,
+    "adj_r2": 0.445,
+    "aic": 20062.6,
+    "f_stat": 161.9,
+    "f_pvalue": 0.0
+  }
+}

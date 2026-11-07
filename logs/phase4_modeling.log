@@ -1,0 +1,95 @@
+2026-11-05 12:25:17 [INFO] [phase4]: ======================================================================
+2026-11-05 12:25:17 [INFO] [phase4]: STARTING PHASE 4: PREDICTIVE MODELING & VALUATION ENGINE
+2026-11-05 12:25:17 [INFO] [phase4]: ======================================================================
+2026-11-05 12:25:17 [INFO] [phase4]: Loaded feature dataset: 10000 rows, 32 columns
+2026-11-05 12:25:17 [INFO] [phase4]: Train set: 8,000 rows | Test set: 2,000 rows
+2026-11-05 12:25:17 [INFO] [phase4]: Computing Variance Inflation Factors (VIF) on numeric predictors...
+2026-11-05 12:25:17 [INFO] [phase4]: VIF Results:
+    Feature  VIF
+    car_age  1.0
+log_mileage  1.0
+  cylinders  1.0
+ n_features  1.0
+2026-11-05 12:25:17 [INFO] [phase4]: Fitting Ordinary Least Squares (OLS) with HC3 robust covariance...
+2026-11-05 12:25:17 [INFO] [phase4]: OLS fitted: R²=0.4486, Adj R²=0.4450, AIC=20062.6
+2026-11-05 12:25:17 [INFO] [phase4]: Duan Smearing Factor (OLS): 1.3923
+2026-11-05 12:25:17 [INFO] [phase4]: Building scikit-learn Preprocessing and Machine Learning Pipelines...
+2026-11-05 12:25:17 [INFO] [phase4]: Executing 5-Fold Cross-Validation on 8,000 training records...
+2026-11-05 12:25:30 [INFO] [phase4]: 5-Fold CV Performance Comparison:
+2026-11-05 12:25:30 [INFO] [phase4]:   Baseline (Mean)          : CV R²=-0.0000, CV RMSE=1.1342, CV MAE=0.9057
+2026-11-05 12:25:30 [INFO] [phase4]:   OLS (Linear)             : CV R²=0.4402, CV RMSE=0.8485, CV MAE=0.6710
+2026-11-05 12:25:30 [INFO] [phase4]:   Random Forest            : CV R²=0.5302, CV RMSE=0.7773, CV MAE=0.6030
+2026-11-05 12:25:30 [INFO] [phase4]:   Gradient Boosting (GBDT) : CV R²=0.5403, CV RMSE=0.7690, CV MAE=0.6027
+2026-11-05 12:25:30 [INFO] [phase4]: Training production GBDT pipeline on full training split...
+2026-11-05 12:25:33 [INFO] [phase4]: Test-Set Evaluation Results (2,000 records):
+2026-11-05 12:25:33 [INFO] [phase4]:   Baseline (Mean)          : R²=-0.0001, RMSE=1.1233, MedAPE=140.7%, MAE=232,808 AED
+2026-11-05 12:25:33 [INFO] [phase4]:   OLS (Linear)             : R²=0.4240, RMSE=0.8525, MedAPE=57.4%, MAE=157,120 AED
+2026-11-05 12:25:33 [INFO] [phase4]:   Random Forest            : R²=0.5075, RMSE=0.7883, MedAPE=49.2%, MAE=136,282 AED
+2026-11-05 12:25:33 [INFO] [phase4]:   Gradient Boosting (GBDT) : R²=0.5128, RMSE=0.7841, MedAPE=48.6%, MAE=134,322 AED
+2026-11-05 12:25:33 [INFO] [phase4]: Conducting Sensitivity Analysis on Test Set...
+2026-11-05 12:25:33 [INFO] [phase4]: Sensitivity Analysis Table:
+                               Sample  R2_Log  RMSE_Log  Median_APE   MAE_AED
+              Full Test Set (N=2,000)  0.5128    0.7841       48.62 134322.46
+Trimmed Outliers (|e| <= 3σ) (N=1988)  0.5382    0.7576       48.41 127753.84
+        Plausible Usage Only (N=1735)  0.5105    0.7775       49.02 135345.73
+2026-11-05 12:25:33 [INFO] [phase4]: Generating Phase 4 Publication Figures (Fig 4.1 to 4.5)...
+2026-11-05 12:25:33 [INFO] [phase4]: Saved figure: figures/fig_4_1_pred_vs_actual.png
+2026-11-05 12:25:33 [INFO] [phase4]: Saved figure: figures/fig_4_2_residuals_vs_fitted.png
+2026-11-05 12:25:34 [INFO] [phase4]: Saved figure: figures/fig_4_3_residual_qq_distribution.png
+2026-11-05 12:25:38 [INFO] [phase4]: Saved figure: figures/fig_4_4_permutation_importance.png
+2026-11-05 12:27:52 [INFO] [phase4]: ======================================================================
+2026-11-05 12:27:52 [INFO] [phase4]: STARTING PHASE 4: PREDICTIVE MODELING & VALUATION ENGINE
+2026-11-05 12:27:52 [INFO] [phase4]: ======================================================================
+2026-11-05 12:27:52 [INFO] [phase4]: Loaded feature dataset: 10000 rows, 32 columns
+2026-11-05 12:27:52 [INFO] [phase4]: Train set: 8,000 rows | Test set: 2,000 rows
+2026-11-05 12:27:52 [INFO] [phase4]: Computing Variance Inflation Factors (VIF) on numeric predictors...
+2026-11-05 12:27:52 [INFO] [phase4]: VIF Results:
+    Feature  VIF
+    car_age  1.0
+log_mileage  1.0
+  cylinders  1.0
+ n_features  1.0
+2026-11-05 12:27:52 [INFO] [phase4]: Fitting Ordinary Least Squares (OLS) with HC3 robust covariance...
+2026-11-05 12:27:53 [INFO] [phase4]: OLS fitted: R²=0.4486, Adj R²=0.4450, AIC=20062.6
+2026-11-05 12:27:53 [INFO] [phase4]: Duan Smearing Factor (OLS): 1.3923
+2026-11-05 12:27:53 [INFO] [phase4]: Building scikit-learn Preprocessing and Machine Learning Pipelines...
+2026-11-05 12:27:53 [INFO] [phase4]: Executing 5-Fold Cross-Validation on 8,000 training records...
+2026-11-05 12:28:05 [INFO] [phase4]: 5-Fold CV Performance Comparison:
+2026-11-05 12:28:05 [INFO] [phase4]:   Baseline (Mean)          : CV R²=-0.0000, CV RMSE=1.1342, CV MAE=0.9057
+2026-11-05 12:28:05 [INFO] [phase4]:   OLS (Linear)             : CV R²=0.4402, CV RMSE=0.8485, CV MAE=0.6710
+2026-11-05 12:28:05 [INFO] [phase4]:   Random Forest            : CV R²=0.5313, CV RMSE=0.7764, CV MAE=0.6025
+2026-11-05 12:28:05 [INFO] [phase4]:   Gradient Boosting (GBDT) : CV R²=0.5405, CV RMSE=0.7687, CV MAE=0.6031
+2026-11-05 12:28:05 [INFO] [phase4]: Training production GBDT pipeline on full training split...
+2026-11-05 12:28:08 [INFO] [phase4]: Test-Set Evaluation Results (2,000 records):
+2026-11-05 12:28:08 [INFO] [phase4]:   Baseline (Mean)          : R²=-0.0001, RMSE=1.1233, MedAPE=140.7%, MAE=232,808 AED
+2026-11-05 12:28:08 [INFO] [phase4]:   OLS (Linear)             : R²=0.4240, RMSE=0.8525, MedAPE=57.4%, MAE=157,120 AED
+2026-11-05 12:28:08 [INFO] [phase4]:   Random Forest            : R²=0.5079, RMSE=0.7880, MedAPE=49.3%, MAE=136,526 AED
+2026-11-05 12:28:08 [INFO] [phase4]:   Gradient Boosting (GBDT) : R²=0.5143, RMSE=0.7829, MedAPE=49.2%, MAE=133,735 AED
+2026-11-05 12:28:08 [INFO] [phase4]: Conducting Sensitivity Analysis on Test Set...
+2026-11-05 12:28:08 [INFO] [phase4]: Sensitivity Analysis Table:
+                               Sample  R2_Log  RMSE_Log  Median_APE   MAE_AED
+              Full Test Set (N=2,000)  0.5143    0.7829       49.18 133734.68
+Trimmed Outliers (|e| <= 3σ) (N=1988)  0.5402    0.7560       48.76 127073.39
+        Plausible Usage Only (N=1735)  0.5113    0.7769       49.66 135199.37
+2026-11-05 12:28:08 [INFO] [phase4]: Generating Phase 4 Publication Figures (Fig 4.1 to 4.5)...
+2026-11-05 12:28:09 [INFO] [phase4]: Saved figure: figures/fig_4_1_pred_vs_actual.png
+2026-11-05 12:28:09 [INFO] [phase4]: Saved figure: figures/fig_4_2_residuals_vs_fitted.png
+2026-11-05 12:28:09 [INFO] [phase4]: Saved figure: figures/fig_4_3_residual_qq_distribution.png
+2026-11-05 12:28:13 [INFO] [phase4]: Saved figure: figures/fig_4_4_permutation_importance.png
+2026-11-05 12:28:15 [INFO] [phase4]: Saved figure: figures/fig_4_5_partial_dependence.png
+2026-11-05 12:28:15 [INFO] [phase4]: Generating Deal Flagging Engine and Saving deal_scores.csv...
+2026-11-05 12:28:15 [INFO] [phase4]: Deal Flagging Summary across 10,000 listings:
+             Count  Share_Pct
+deal_flag                    
+Overpriced    3638      36.38
+Undervalued   3389      33.89
+Fair Price    2973      29.73
+2026-11-05 12:28:15 [INFO] [phase4]: Exported deal scores to: data/processed/deal_scores.csv
+2026-11-05 12:28:15 [INFO] [phase4]: Saving production model pipeline to: models/price_model.joblib
+2026-11-05 12:28:15 [INFO] [phase4]: Saved model metadata to: models/metadata.json
+2026-11-05 12:28:15 [INFO] [phase4]: ======================================================================
+2026-11-05 12:28:15 [INFO] [phase4]: PHASE 4 COMPLETED SUCCESSFULLY.
+2026-11-05 12:28:15 [INFO] [phase4]: ======================================================================
+2026-11-05 12:29:34 [INFO] [phase4]: Loaded feature dataset: 10000 rows, 32 columns
+2026-11-05 12:29:34 [INFO] [phase4]: Train set: 8,000 rows | Test set: 2,000 rows
+2026-11-05 12:29:34 [INFO] [phase4]: OLS fitted: R²=0.4486, Adj R²=0.4450, AIC=20062.6
